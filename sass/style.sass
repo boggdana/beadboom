@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css?family=Antic&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap')
+
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	transition: all .1s ease-in
+	font-family: Montserrat
+	color: #0C1D41
+
+header
+	height: 100vh
+	width: 100%
+	align-items: center
+	background: url('../img/back7.jpg')
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	
+	
+
+	
+.container
+	width: 90%
+	margin: 0 auto
+
+
+	
+
+.menu
+	z-index: 50
+	display: flex
+	align-items: center
+	background-color: rgba(255, 255, 255, 0.9)
+
+.list
+	color: #395081
+	margin-left: 30px
+
+	ul
+		display: flex
+		align-items: center
+		list-style: none
+	li
+		padding: 7px
+		margin: 7px
+		margin-top: 7px
+		border-radius: 10px
+		&:hover
+			background-color: #fff
+	a
+		text-decoration: none
+		color: #395081
+		font-weight: 600
+
+.mobile-menu
+	position: fixed
+	display: none
+	margin: 0 auto
+	left: 50%
+	margin-left: -45px
+	z-index: 100
+	&__menu-btn
+		display: block
+		width: 90px
+		height: 40px
+		background: #395081
+		border-radius: 0 0 50% 50% / 0 0 100% 100%
+
+		
+
+		span, span:before, span:after
+			display: block
+			width: 30px
+			height: 2px
+			background: #fff
+			position: absolute
+			z-index: 20
+			top: 40%
+			left: 50%
+			margin-left: -15px
+			border-radius: 2px
+			
+		span:before, span:after
+			content: ""
+
+		span:before
+			transform: translateY(-5px)
+
+		span:after
+			transform: translateY(4px)
+.active-menu
+	span:after
+		display: none
+	span
+		width: 20px
+		height: 3px
+		transform: rotate(45deg)
+		margin-left: -10px
+
+	span:before
+		width: 20px
+		height: 3px
+		transform: rotate(90deg)
+		margin-left: -10px
+		top: 0
+
+
+
+
+
+.heading
+	margin-left: 10px
+
+	h1
+		font-family: Antic
+		font-size: 36px
+		color: #395081
+
+	h2	
+		color: #395081
+		margin-bottom: 10px
+		font-size: 14px
+
+	a
+		color: #fff
+		text-decoration: none
+		&:hover
+			color: #000
+		
+
+.main
+	height: 100%
+	text-align: center
+	
+	margin-left: 60%
+	margin-top: 8%
+	padding: 10px
+	padding-top: 75px
+	height: 300px
+	width: 300px
+	background-color: #2D5E75
+	border-radius: 50%
+	text-align: center
+	a
+		color: #fff
+		font-size: 26px
+		text-decoration: none
+		
+
+.about
+	color: #395081
+	height: 100%
+	margin-top: 20px
+	padding-top: 40px
+	text-align: center
+	&__text
+		width: 60%
+		margin: 0 auto
+		h2
+			
+			margin-bottom: 10px
+		p
+			margin-top: 20px
+			text-align: justify
+			line-height: 25px
+			margin-bottom: 25px
+
+
+.gallery
+
+	height: 100%
+	padding-top: 40px
+	
+
+	&__carousel
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	&__image
+		align-items: center
+		height: 50vh
+		width: 100%
+		border: solid 1px white
+		margin: auto
+		border-radius: 10px
+
+.slick-arrow
+	position: absolute
+	z-index: 2
+	font-size: 0
+	top: 45%
+	height: 30px
+	width: 30px
+	outline: none
+	border: none
+	background-color: rgba(255, 255, 255, 0.7)
+	transition: all 0.3s
+	cursor: pointer
+	border-radius: 50%
+
+
+.slick-arrow:hover
+	background-color: rgba(255, 255, 255, 1)
+
+
+
+.slick-prev:before
+	content: ""
+	width: 15px
+	height: 15px
+	display: block
+	position: absolute
+	background: url('../icons/prevt_grey.png') no-repeat
+	background-size: contain
+	top: 7px
+	left: 5px
+
+.slick-next:before
+	content: ""
+	width: 15px
+	height: 15px
+	display: block
+	position: absolute
+	background: url('../icons/next_grey.png') no-repeat
+	background-size: contain
+	top: 7px
+	left: 8px
+
+.slick-prev
+	left: 0px
+
+
+.slick-next
+	right: 0px
+
+
+
+.range
+	width: 100%
+	color: #395081
+	min-height: 100%
+	margin-top: 50px
+	margin: 0 auto
+	text-align: center
+	background-image: url('../img/back.jpg')
+	background-size: cover
+	background-position: center
+	padding-top: 40px
+	h2
+		margin-bottom: 10px
+		
+
+	&__photo
+		width: 80%
+		display: flex
+		flex-wrap: wrap
+		margin: 0 auto
+		justify-content: space-around
+
+	&__item
+		margin: 5px
+
+		h3
+			margin: 5px
+
+	
+	&__image
+		align-items: center
+		height: 220px
+		width: 220px
+		margin: auto
+		border-radius: 50%
+		
+		
+
+.order
+	color: #395081
+	min-height: 100%
+	padding-top: 50px
+	text-align: center
+	&__text
+		width: 60%
+		margin: 0 auto
+		h2
+			
+			margin-bottom: 10px
+		p
+			margin-top: 20px
+			text-align: justify
+			line-height: 25px
+			margin-bottom: 25px
+
+.delivery
+	color: #395081
+	min-width: 100%
+	padding-top: 50px
+	text-align: center
+	&__text
+		width: 60%
+		margin: 0 auto
+		h2
+			
+			margin-bottom: 10px
+		p
+			margin-top: 20px
+			text-align: justify
+			line-height: 25px
+			margin-bottom: 25px
+
+
+.contacts
+	color: #395081
+	min-height: 100%
+	padding-top: 40px 
+	margin-bottom: 40px
+
+	
+	&__text
+		margin-left: 40%
+		color: #0C1D41
+		line-height: 40px
+		
+		h4
+			display: flex
+			align-items: center
+		
+		img
+			margin-right: 10px
+			height: 30px
+
+		ul
+			list-style: none
+		li
+			padding-top: 5px
+		a
+			color: #0C1D41
+			text-decoration: none
+			&:hover
+				color: #000
+
+
+footer
+	display: flex
+	align-items: center
+	justify-content: space-between
+	height: 50vh
+	margin-top: 50px
+	background-color: #F56560
+	padding-right: 10%
+
+.copyright
+	margin-left: 10%
+	
+	span
+		line-height: 25px
+		color: #fff
+	&__name
+		
+		h1
+			color: #fff
+			margin-top: 10px
+			font-family: Antic
+			font-size: 36px
+			
+
+		h2	
+			color: #fff
+			margin-bottom: 10px
+			font-size: 14px
+
+	&__list
+		ul
+			list-style: none
+		a
+			text-decoration: none
+			color: #fff
+			line-height: 30px
+			&:hover
+				color: #66DDAA
+
+				
+
+@media (max-width: 1024px)
+	.main
+		position: absolute
+		top: 25%
+		left: 50%
+		margin-left: -125px
+		margin-top: 0
+		padding: 10px
+		padding-top: 60px
+		height: 250px
+		width: 250px
+		a
+			font-size: 20px
+			line-height: 30px
+	.menu
+		padding-top: 13%
+		position: fixed
+		display: none
+		margin: 0 auto
+		text-align: center
+		width: 100%
+		height: 100%
+
+		ul
+			display: block
+			margin-left: 0
+			margin-top: 20px
+	.visible-menu
+		display: block
+	.list
+		margin-left: 0
+		margin-top: 5%
+		a
+			font-size: 16px
+		li
+			display: inline-block
+	.heading
+		
+		margin-left: 0
+		text-align: center
+
+
+	.copyright
+		margin-left: 10%
+		span
+			font-size: 12px
+	
+		&__name
+		
+			h1
+				font-size: 30px
+			
+
+			h2	
+			
+				font-size: 12px
+
+		&__list
+			a
+				font-size: 12px
+				&:hover
+					color: #66DDAA
+
+	.mobile-menu
+		display: block
+
+	.contacts
+		&__text
+			margin-left: 5%
+	.copyright
+		margin-left: 20%
+		&__list
+			display: none
+		&__name
+			display: none
+
+
+@media (max-width: 359px)
+
+	.list
+		margin-top: 10%
+		a
+			font-size: 20px
+
+
+			
+	
+
+
+
+
+	
